@@ -23,6 +23,7 @@ Please follow these instructions for further enlightenment.
 With your partner look through `start.rb` and `near_earth_objects.rb`
 
 - Discuss is this 'good' or 'bad' code? Why?
+  * This would probably be classified as 'bad' code.  It's breaking rules like SRP
 
 ---
 
@@ -31,10 +32,13 @@ With your partner look through `start.rb` and `near_earth_objects.rb`
 With your Partner, identify the different responsibilities that exist in each file.
 
 - Does this adhere to SRP?
+  * Neither near_earth_object.rb and start.rb appear to adhere to SRP.  the neo.rb file has code that's handling many different things in a single method, and, in start.rb's case, there are no methods but the code is all chunked together in one file.
 
 - How would you utilize encapsulation and abstraction to refactor this code?
+  * Based on the definitions of encapsulation and abstraction, I think both concepts would apply to the start.rb file, and abstraction would be appropriate for the neo.rb file.  Start.rb needs to be encapsulated in a class, and then the actions being taken should be broken into individual methods.
 
 - What tools/strategies could you utilize to make this code adhere to SRP?
+  * As mentioned, using encapsulation and abstraction to clean up the code and adhere to SRP.
 
 ---
 
